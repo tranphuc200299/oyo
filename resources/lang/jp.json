@@ -1,0 +1,22 @@
+{
+    "Sẽ làm gì ?": "何をしますか？",
+    "Đối chiếu Data sheet bảng list *vật lý": "一覧表・物理データシート照合",
+    "Đối chiếu Data sheet bảng list *vật lý*cơ học": "一覧表・物理・力学データシート照合",
+    "Bạn có muốn bắt đầu kiểm tra không": "のチェックを開始しますか？",
+    "Start đối chiếu tự động": "自動照合開始",
+    "Sẽ check file này nhé.": "のチェックを開始しますか？",
+    "kết thúc đối chiếu": "照合終了",
+    "Tên file": "ファイル名",
+    "Các Item sau không match": "には下記の項目が一致していません",
+    "Sẽ Export PDF đã check nhé": " チェックしたPDFを出力しますか。",
+    "Next": "次へ",
+    "Back": "戻る",
+    "Yes": "はい",
+    "No": "いいえ",
+    "Choose File": "ファイル選択",
+    "Invalid file type": "ファイルの形式が正しくありません。",
+    "Attachment Required": "PDFファイルを選択してください。",
+    "FileName": "ファイル名",
+    "Survey subject": "調査件名",
+    "Samples": "試料番号"
+}
