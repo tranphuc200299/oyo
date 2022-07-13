@@ -38,7 +38,7 @@
             </div>
             <div class="modal-footer automatic">
                 <button type="button" class="btn btn-primary float-left automatic-back">{{__('No')}}</button>
-                <button type="button" class="btn btn-primary btn-show-compare-next btn-save">OK</button>
+                <button type="button" class="btn btn-primary btn-show-compare-next btn-save">{{(__('OK'))}}</button>
             </div>
         </div>
     </div>
