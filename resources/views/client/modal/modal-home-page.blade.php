@@ -64,7 +64,7 @@
          let form_page = $(this).parents('#form_page');
          loadDataAjax(data);
         $.ajax({
-          "url": "http://localhost:8080/confirm-before",
+          "url": @json(url('/api/confirm-before')),
           "method": "POST",
           "timeout": 0,
           "processData": false,
@@ -108,7 +108,7 @@
         // let myFile = document.getElementById("file-select");
         // let file_page = myFile.files[0];
         $.ajax({
-            "url": "http://localhost:8080/compare",
+            "url": @json(url('/api/compare')),
             "method": "POST",
             "timeout": 0,
             "processData": false,

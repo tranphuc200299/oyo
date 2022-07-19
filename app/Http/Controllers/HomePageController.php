@@ -43,7 +43,7 @@ class HomePageController extends Controller
                 ]
             ]];
 
-        $request = new \GuzzleHttp\Psr7\Request('POST', 'http://localhost:8080/highlight');
+        $request = new \GuzzleHttp\Psr7\Request('POST', (url('/api/highlight')));
         $res = $client->sendAsync($request, $options)->wait();
         $fileGetContent = $res->getBody()->getContents();
         $headers  = [
