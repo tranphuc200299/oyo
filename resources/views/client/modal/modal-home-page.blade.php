@@ -84,7 +84,7 @@
                 $(".survey_subject").html(data.survey_subject);
                 let samplesArr =  data.samples;
                 let SampleStr = ' ';
-                samplesArr.forEach(function (e) {
+                samplesArr.forEac h(function (e) {
                     $(".samples").html(SampleStr += e + '</br>');
                 });
                 form_page.find('.btn-save').prop('disabled', false);
