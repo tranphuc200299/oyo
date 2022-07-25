@@ -26,14 +26,16 @@
                     </dib>
                     <div class="content-error">
                         <label for="form-controller" class="file-name-comparison-error"></label>
-                        <h6><b>{{__('Các Item sau không match')}}</b></h6>
+{{--                        <h6><b>{{__('Các Item sau không match')}}</b></h6>--}}
                         <ul class="list-error">
+                            <li class="list_mismatches"></li>
                             <li class="data_type"></li>
+                            </br>
+                            <li class="list_blanks"></li>
+                            <li class="data_blanks"></li>
                             <br>
                             <li>
-                                <b>
                                 {{__('Sẽ Export PDF đã check nhé')}}
-                                </b>                     
                             </li>
                         </ul>
                     </div> 

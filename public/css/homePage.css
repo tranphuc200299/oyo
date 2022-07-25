@@ -24,8 +24,8 @@ img{
     height: 100%;
 }
 .logo{
-    width: 200px;
-    height: 40px;
+    width: 90%;
+    height: 90%;
 }
 .application-image{
     width: 100%;
@@ -94,4 +94,13 @@ img{
 }
 .content-error{
     margin-left: 20px;
+}
+.float-lg-right{
+    margin-top: 20px;
+}
+.data_type{
+    font-weight: bold;
+}
+.data_blanks{
+    font-weight: bold;
 }

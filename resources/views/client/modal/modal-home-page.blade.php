@@ -64,7 +64,8 @@
          let form_page = $(this).parents('#form_page');
          loadDataAjax(data);
         $.ajax({
-          "url": @json(url('/api/confirm-before')),
+          {{--"url": @json(url('/api/confirm-before')),--}}
+          "url": "https://searchapi.ntq.solutions/confirm-before",
           "method": "POST",
           "timeout": 0,
           "processData": false,
@@ -84,7 +85,7 @@
                 $(".survey_subject").html(data.survey_subject);
                 let samplesArr =  data.samples;
                 let SampleStr = ' ';
-                samplesArr.forEac h(function (e) {
+                samplesArr.forEach(function (e) {
                     $(".samples").html(SampleStr += e + '</br>');
                 });
                 form_page.find('.btn-save').prop('disabled', false);
@@ -105,10 +106,8 @@
         let data = new FormData();
         let form_compare = $(this).parents('#form_compare');
         loadDataAjax(data);
-        // let myFile = document.getElementById("file-select");
-        // let file_page = myFile.files[0];
         $.ajax({
-            "url": @json(url('/api/compare')),
+            "url": "https://searchapi.ntq.solutions/compare",
             "method": "POST",
             "timeout": 0,
             "processData": false,
@@ -137,13 +136,29 @@
                 $('.comparison-error').show();
                 console.log(data);
                 let samplesArr =  data.mismatches;
-                let data_type = 'data type :'
+                let dataBlanks = data.blanks;
                 console.log(samplesArr);
                 let result = ' ';
+                let errorBlanks = ' ';
                 samplesArr.forEach(function (e) {
-                    result += e.sample_number ? ' ・ ' + e.sample_number + '    ' + e.data_type + '    ' + e.content  + '</br>' : ' ・ ' + e.data_type + '    ' + e.content  + '</br>';                                        
+                    result += e.sample_number ? "・ページ" + e.pos + '   '  + e.sample_number + '    ' + e.data_type + '    ' + e.content  + '</br>' : " ・ページ " + e.pos + '    ' + e.data_type + '    ' + e.content  + '</br>';
                 });
-                $(".data_type").html(result);
+                dataBlanks.forEach(function (e) {
+                    if(e.sample_number != null){
+                        errorBlanks += "・ページ" + e.pos + '   ' + e.sample_number + '    '  +  e.data_type + '    ' +  '</br>';
+                    }else{
+                        errorBlanks += "・ページ" + e.pos + '   '  + e.data_type + '</br>';
+                    }
+                });
+                if(samplesArr.length != 0){
+                    $(".list_mismatches").html("には下記の項目が一致していません。 </br>");
+                    $(".data_type").html(result);
+                }
+                if(dataBlanks.length != 0){
+                    $(".list_blanks").html(" には下記のページに記入漏れがあります  </br>");
+                    $(".data_blanks").html(errorBlanks);
+                }
+
                 form_compare.find('.btn-save').prop('disabled', false);
                 form_compare.find('.btn-save').html('次へ');
             }

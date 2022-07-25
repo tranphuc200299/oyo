@@ -15,7 +15,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Response;
 use Carbon\Carbon;
 
-class HomePageController extends Controller
+class  HomePageController extends Controller
 {
     public function index()
     {
@@ -43,7 +43,7 @@ class HomePageController extends Controller
                 ]
             ]];
 
-        $request = new \GuzzleHttp\Psr7\Request('POST', (url('/api/highlight')));
+        $request = new \GuzzleHttp\Psr7\Request('POST', (url('https://searchapi.ntq.solutions/highlight')));
         $res = $client->sendAsync($request, $options)->wait();
         $fileGetContent = $res->getBody()->getContents();
         $headers  = [

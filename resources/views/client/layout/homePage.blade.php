@@ -18,12 +18,12 @@
         <div class="row mt-4">
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="logo">
-        
+                    <img src="./images/logog.png" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-3">
                 <div class="title-right float-lg-right">
-                   
+                   <h3 style="font-weight: bold">Home Page</h3>
                 </div>
             </div>
         </div>
