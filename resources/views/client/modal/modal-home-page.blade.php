@@ -64,8 +64,7 @@
          let form_page = $(this).parents('#form_page');
          loadDataAjax(data);
         $.ajax({
-          {{--"url": @json(url('/api/confirm-before')),--}}
-          "url": "https://searchapi.ntq.solutions/confirm-before",
+          "url": @json(url('/api/confirm-before')),
           "method": "POST",
           "timeout": 0,
           "processData": false,
@@ -107,7 +106,7 @@
         let form_compare = $(this).parents('#form_compare');
         loadDataAjax(data);
         $.ajax({
-            "url": "https://searchapi.ntq.solutions/compare",
+            "url": @json(url('/api/compare')),
             "method": "POST",
             "timeout": 0,
             "processData": false,
