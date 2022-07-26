@@ -154,7 +154,7 @@
                     $(".data_type").html(result);
                 }
                 if(dataBlanks.length != 0){
-                    $(".list_blanks").html(" には下記のページに記入漏れがあります  </br>");
+                    $(".list_blanks").html(" には下記のページに記入漏れがあります。 </br>");
                     $(".data_blanks").html(errorBlanks);
                 }
 
