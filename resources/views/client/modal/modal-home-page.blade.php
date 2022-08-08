@@ -1,6 +1,6 @@
 @extends('client.layout.homePage')
 @section('content')
-<form class="home-Page_content home-page-select  mt-4" action="{{route('handlerExport.home')}}" method="post" enctype="multipart/form-data">
+<form class="home-Page_content home-page-select  mt-4" action="{{route('handlerExport.home')}}" method="post" enctype="multipart/form-data" id="form_id">
     @csrf
     <div class="modal-content form-homePage"  id="form_page">
         <div class="modal-content">
@@ -71,6 +71,7 @@
           "mimeType": "multipart/form-data",
           "contentType": false,
           "data": data,
+          "cache": false,
            beforeSend: function() {
                     form_page.find('.btn-save').html('<i class="fas fa-spinner fa-pulse"></i>');
                 },
@@ -113,6 +114,7 @@
             "mimeType": "multipart/form-data",
             "contentType": false,
             "data": data,
+            "cache": false,
             beforeSend: function() {
                 form_compare.find('.btn-save').html('<i class="fas fa-spinner fa-pulse"></i>');
             },

@@ -27,6 +27,9 @@ class  HomePageController extends Controller
         $client = new \GuzzleHttp\Client();
         $file = $request->file('file');
         $fileName = $file->getClientOriginalName();
+        $pattern = '/\.pdf/';
+        $patternCheck = '_check.pdf';
+        $fileCheck = preg_replace($pattern, $patternCheck,$fileName);
         $options = [
             'multipart' => [
                 [
@@ -48,11 +51,11 @@ class  HomePageController extends Controller
         $fileGetContent = $res->getBody()->getContents();
         $headers  = [
             "Content-Type" => "application/octet-stream",
-            "Content-Disposition" => 'attachment; filename=' .$fileName . ';',
+            "Content-Disposition" => 'attachment; filename=' .$fileCheck . ';',
         ];
         return Response()->streamDownload( function() use ($fileGetContent){
             echo $fileGetContent;
-        },$fileName,$headers);
+        },$fileCheck,$headers);
     }
 
 }

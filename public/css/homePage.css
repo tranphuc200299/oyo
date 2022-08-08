@@ -104,3 +104,19 @@ img{
 .data_blanks{
     font-weight: bold;
 }
+.images-right{
+    display: flex;
+    justify-content: flex-end;
+}
+.unnamed{
+    width: 6%;
+    height: 6%;
+    line-height: 58px;
+    margin: 0px 15px;
+}
+.ntq{
+    width: 28%;
+}
+.oyo-logo{
+    width: 38%;
+}

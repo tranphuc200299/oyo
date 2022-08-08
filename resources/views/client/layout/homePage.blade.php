@@ -16,14 +16,22 @@
 <div class="header">
     <div class="container">
         <div class="row mt-4">
-            <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="col-lg-7 col-md-6 col-xs-12">
                 <div class="logo">
                     <img src="./images/logog.png" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-3">
-                <div class="title-right float-lg-right">
-                   <h3 style="font-weight: bold">Home Page</h3>
+            <div class="col-lg-5 col-md-6 col-xs-3">
+                <div class="title-right float-lg-right images-right">
+                    <div class="ntq">
+                        <img src="./images/ntq.png" alt="">
+                    </div>
+                    <div class="unnamed">
+                        <img src="./images/unnamed.png" alt="">
+                    </div>
+                    <div class="oyo-logo">
+                        <img src="./images/oyo logo.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
